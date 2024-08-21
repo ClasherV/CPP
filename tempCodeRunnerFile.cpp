@@ -1,1 +1,1 @@
-printf("\0338\033[J");
+  student s;
