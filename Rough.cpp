@@ -1,30 +1,31 @@
+// C++ Program to demonstrate
+// Static member in a class
 #include <iostream>
-#include <cmath>
 using namespace std;
+
+class Student {
+public:
+	// static member
+	static int total;
+
+	// Constructor called
+	Student() { total += 1; }
+};
+
+int Student::total = 0;
+
 int main()
 {
-	int n;
-	cout<<endl<<"Enter the Number of Terms in the Series: ";
-	cin>>n;
-	int Series[n];
-	cout<<endl;
-	int a=0;
-	for(int i=0;i<n;i++)
-	{
-		Series[a]=pow(2,i);
-		a++;
-		Series[a]=pow(3,i);
-		a++;
-	}
-	cout<<"Given Series is:\t";
-	for(int i=0;i<n;i++)
-	{
-		cout<<Series[i]<<"\t";
-	}
-	cout<<endl<<endl;
-	int N;
-	cout<<"Enter the Nth Number: ";
-	cin>>N;
-	cout<<endl<<"Nth Term is: "<<Series[N-1]<<endl<<endl;
+	// Student 1 declared
+	Student s1;
+	cout << "Number of students:" << s1.total << endl;
+
+	// Student 2 declared
+	Student s2;
+	cout << "Number of students:" << s2.total << endl;
+
+	// Student 3 declared
+	Student s3;
+	cout << "Number of students:" << s3.total << endl;
 	return 0;
 }

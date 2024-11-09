@@ -2,20 +2,12 @@
 using namespace std;
 int main()
 {
-    int n,Factorial=1;;
+    int n,Factorial=1;
     cout<<"Enter a Number (Integer only): ";
     cin>>n;
     for(int i=1;i<=n;i++)
     {
-        if(n==0)
-        {
-            Factorial=0;
-            break;
-        }
-        else
-        {
-            Factorial*=i;
-        }
+        Factorial*=i;
     }
     if(n<0)
     {
